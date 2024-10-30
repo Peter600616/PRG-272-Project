@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnViewStudents = new System.Windows.Forms.Button();
             this.btnUpdateInfo = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnSummary = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnAddStudent
-            // 
-            this.btnAddStudent.Location = new System.Drawing.Point(303, 170);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(213, 94);
-            this.btnAddStudent.TabIndex = 0;
-            this.btnAddStudent.Text = "Add New Student";
-            this.btnAddStudent.UseVisualStyleBackColor = true;
             // 
             // btnViewStudents
             // 
@@ -89,16 +79,14 @@
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnUpdateInfo);
             this.Controls.Add(this.btnViewStudents);
-            this.Controls.Add(this.btnAddStudent);
             this.Name = "Form1";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnViewStudents;
         private System.Windows.Forms.Button btnUpdateInfo;
         private System.Windows.Forms.Button btnDeleteStudent;
