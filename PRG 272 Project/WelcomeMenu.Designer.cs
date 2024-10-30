@@ -42,6 +42,8 @@
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCredentials = new System.Windows.Forms.Label();
+            this.btnClearInPut = new System.Windows.Forms.Button();
+            this.BtnMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WMBackground)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +85,8 @@
             // 
             // txtStudentID
             // 
-            this.txtStudentID.ForeColor = System.Drawing.Color.Chartreuse;
+            this.txtStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentID.ForeColor = System.Drawing.Color.Black;
             this.txtStudentID.Location = new System.Drawing.Point(290, 172);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(202, 20);
@@ -91,6 +94,7 @@
             // 
             // txtStudentName
             // 
+            this.txtStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentName.Location = new System.Drawing.Point(290, 216);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(202, 20);
@@ -121,6 +125,7 @@
             // 
             // txtStudentCourse
             // 
+            this.txtStudentCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentCourse.Location = new System.Drawing.Point(290, 293);
             this.txtStudentCourse.Name = "txtStudentCourse";
             this.txtStudentCourse.Size = new System.Drawing.Size(202, 20);
@@ -128,10 +133,12 @@
             // 
             // txtStudentAge
             // 
+            this.txtStudentAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentAge.Location = new System.Drawing.Point(290, 255);
             this.txtStudentAge.Name = "txtStudentAge";
             this.txtStudentAge.Size = new System.Drawing.Size(202, 20);
             this.txtStudentAge.TabIndex = 8;
+            this.txtStudentAge.TextChanged += new System.EventHandler(this.txtStudentAge_TextChanged);
             // 
             // WMBackground
             // 
@@ -150,7 +157,7 @@
             // btnAddStudent
             // 
             this.btnAddStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddStudent.Location = new System.Drawing.Point(311, 361);
+            this.btnAddStudent.Location = new System.Drawing.Point(224, 361);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(152, 46);
             this.btnAddStudent.TabIndex = 10;
@@ -182,12 +189,35 @@
             this.lblCredentials.Text = "Enter your Student Details:";
             this.lblCredentials.Click += new System.EventHandler(this.lblCredentials_Click);
             // 
+            // btnClearInPut
+            // 
+            this.btnClearInPut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearInPut.Location = new System.Drawing.Point(421, 361);
+            this.btnClearInPut.Name = "btnClearInPut";
+            this.btnClearInPut.Size = new System.Drawing.Size(152, 46);
+            this.btnClearInPut.TabIndex = 12;
+            this.btnClearInPut.Text = "Clear";
+            this.btnClearInPut.UseVisualStyleBackColor = true;
+            this.btnClearInPut.Click += new System.EventHandler(this.btnClearInPut_Click);
+            // 
+            // BtnMenu
+            // 
+            this.BtnMenu.Location = new System.Drawing.Point(357, 431);
+            this.BtnMenu.Name = "BtnMenu";
+            this.BtnMenu.Size = new System.Drawing.Size(75, 23);
+            this.BtnMenu.TabIndex = 13;
+            this.BtnMenu.Text = "Go To Menu";
+            this.BtnMenu.UseVisualStyleBackColor = true;
+            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
             // WelcomeMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(752, 466);
+            this.Controls.Add(this.BtnMenu);
+            this.Controls.Add(this.btnClearInPut);
             this.Controls.Add(this.lblCredentials);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddStudent);
@@ -226,5 +256,7 @@
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCredentials;
+        private System.Windows.Forms.Button btnClearInPut;
+        private System.Windows.Forms.Button BtnMenu;
     }
 }
