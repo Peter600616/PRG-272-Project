@@ -29,36 +29,69 @@
         private void InitializeComponent()
         {
             this.btnAddStudent = new System.Windows.Forms.Button();
-            this.btn_InfoStudent = new System.Windows.Forms.Button();
+            this.btnViewStudents = new System.Windows.Forms.Button();
+            this.btnUpdateInfo = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.btnSummary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(74, 55);
+            this.btnAddStudent.Location = new System.Drawing.Point(303, 170);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(213, 94);
             this.btnAddStudent.TabIndex = 0;
             this.btnAddStudent.Text = "Add New Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             // 
-            // btn_InfoStudent
+            // btnViewStudents
             // 
-            this.btn_InfoStudent.Location = new System.Drawing.Point(62, 168);
-            this.btn_InfoStudent.Name = "btn_InfoStudent";
-            this.btn_InfoStudent.Size = new System.Drawing.Size(270, 53);
-            this.btn_InfoStudent.TabIndex = 1;
-            this.btn_InfoStudent.Text = "View info of student";
-            this.btn_InfoStudent.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Location = new System.Drawing.Point(303, 310);
+            this.btnViewStudents.Name = "btnViewStudents";
+            this.btnViewStudents.Size = new System.Drawing.Size(213, 94);
+            this.btnViewStudents.TabIndex = 1;
+            this.btnViewStudents.Text = "View All Students";
+            this.btnViewStudents.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateInfo
+            // 
+            this.btnUpdateInfo.Location = new System.Drawing.Point(458, 437);
+            this.btnUpdateInfo.Name = "btnUpdateInfo";
+            this.btnUpdateInfo.Size = new System.Drawing.Size(213, 94);
+            this.btnUpdateInfo.TabIndex = 2;
+            this.btnUpdateInfo.Text = "Update Student Information";
+            this.btnUpdateInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.Location = new System.Drawing.Point(639, 170);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(213, 94);
+            this.btnDeleteStudent.TabIndex = 3;
+            this.btnDeleteStudent.Text = "Delete a Student";
+            this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            // 
+            // btnSummary
+            // 
+            this.btnSummary.Location = new System.Drawing.Point(639, 310);
+            this.btnSummary.Name = "btnSummary";
+            this.btnSummary.Size = new System.Drawing.Size(212, 94);
+            this.btnSummary.TabIndex = 4;
+            this.btnSummary.Text = "Generate Summary Report";
+            this.btnSummary.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 587);
-            this.Controls.Add(this.btn_InfoStudent);
+            this.ClientSize = new System.Drawing.Size(1135, 708);
+            this.Controls.Add(this.btnSummary);
+            this.Controls.Add(this.btnDeleteStudent);
+            this.Controls.Add(this.btnUpdateInfo);
+            this.Controls.Add(this.btnViewStudents);
             this.Controls.Add(this.btnAddStudent);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Menu";
             this.ResumeLayout(false);
 
         }
@@ -66,7 +99,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.Button btn_InfoStudent;
+        private System.Windows.Forms.Button btnViewStudents;
+        private System.Windows.Forms.Button btnUpdateInfo;
+        private System.Windows.Forms.Button btnDeleteStudent;
+        private System.Windows.Forms.Button btnSummary;
     }
 }
 
