@@ -14,10 +14,9 @@ namespace PRG_272_Project
 {
     public partial class frmAddStudent : Form
     {
-        static List<string> studentList = new List<string>();
+        static List<Student> studentList = new List<Student>();
 
-        string studentsInfo = "students.txt";
-        Student student = new Student();
+        
         public frmAddStudent()
         {
             InitializeComponent();
@@ -39,11 +38,18 @@ namespace PRG_272_Project
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            string studentID = txtStudentID.Text;
+            int studentID = int.Parse(txtStudentID.Text);
             string studentName = txtStudentName.Text;
             int studentAge = int.Parse(txtStudentAge.Text);
             string studentCourse = txtStudentCourse.Text;
 
+            Student student = new Student(studentID, studentName, studentAge, studentCourse);
+            studentList.Add(student);
+
+            FileHandler fh = new FileHandler();
+            fh.write(studentList);
+
+            /*
             using (StreamWriter write = new StreamWriter(studentsInfo,true))
             {
                 Student student = new Student(studentID, studentName, studentAge, studentCourse);
@@ -52,7 +58,7 @@ namespace PRG_272_Project
                
                 studentList.Add(student.ToString());
 
-            }
+            }*/
 
             MessageBox.Show("Data has been saved to the text file");
         }

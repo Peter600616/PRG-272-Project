@@ -43,6 +43,7 @@
             this.btnViewStudents.TabIndex = 1;
             this.btnViewStudents.Text = "View All Students";
             this.btnViewStudents.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Click += new System.EventHandler(this.btnViewStudents_Click);
             // 
             // btnUpdateInfo
             // 
@@ -52,6 +53,7 @@
             this.btnUpdateInfo.TabIndex = 2;
             this.btnUpdateInfo.Text = "Update Student Information";
             this.btnUpdateInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click);
             // 
             // btnDeleteStudent
             // 
@@ -61,6 +63,7 @@
             this.btnDeleteStudent.TabIndex = 3;
             this.btnDeleteStudent.Text = "Delete a Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnSummary
             // 
@@ -70,6 +73,7 @@
             this.btnSummary.TabIndex = 4;
             this.btnSummary.Text = "Generate Summary Report";
             this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
             // 
             // btnAddStudent
             // 

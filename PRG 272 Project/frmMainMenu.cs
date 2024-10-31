@@ -29,5 +29,29 @@ namespace PRG_272_Project
             frmAddStudent addStudent = new frmAddStudent();
             addStudent.ShowDialog();
         }
+
+        private void btnViewStudents_Click(object sender, EventArgs e)
+        {
+            frmViewStudents viewStudents = new frmViewStudents();
+            viewStudents.ShowDialog();
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            frmDeleteStudent delStudent = new frmDeleteStudent();
+            delStudent.ShowDialog();
+        }
+
+        private void btnSummary_Click(object sender, EventArgs e)
+        {
+            frmSummaryReport summaryReport = new frmSummaryReport();
+            summaryReport.ShowDialog();
+        }
+
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            frmSummaryReport updateReport = new frmSummaryReport();
+            updateReport.ShowDialog();
+        }
     }
 }

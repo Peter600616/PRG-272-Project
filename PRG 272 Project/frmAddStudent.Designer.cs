@@ -148,7 +148,7 @@
             this.WMBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WMBackground.Location = new System.Drawing.Point(0, -3);
             this.WMBackground.Name = "WMBackground";
-            this.WMBackground.Size = new System.Drawing.Size(746, 504);
+            this.WMBackground.Size = new System.Drawing.Size(746, 502);
             this.WMBackground.TabIndex = 9;
             this.WMBackground.TabStop = false;
             this.WMBackground.Click += new System.EventHandler(this.WMBackground_Click);
@@ -217,7 +217,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.WMBackground);
             this.Name = "frmAddStudent";
-            this.Text = "WelcomeMenu";
+            this.Text = "Add a Student";
             this.Load += new System.EventHandler(this.WelcomeMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WMBackground)).EndInit();
             this.ResumeLayout(false);
