@@ -1,6 +1,6 @@
 ﻿namespace PRG_272_Project
 {
-    partial class WelcomeMenu
+    partial class frmAddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddStudent));
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblStudentID = new System.Windows.Forms.Label();
             this.lblStudentName = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.txtStudentAge = new System.Windows.Forms.TextBox();
             this.WMBackground = new System.Windows.Forms.PictureBox();
             this.btnAddStudent = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.lblCredentials = new System.Windows.Forms.Label();
             this.btnClearInPut = new System.Windows.Forms.Button();
             this.BtnMenu = new System.Windows.Forms.Button();
@@ -51,7 +50,7 @@
             // 
             this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
             this.lblWelcome.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(230, 9);
+            this.lblWelcome.Location = new System.Drawing.Point(234, -3);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 18, 0, 0);
             this.lblWelcome.Size = new System.Drawing.Size(306, 123);
@@ -147,9 +146,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WMBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WMBackground.BackgroundImage")));
             this.WMBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.WMBackground.Location = new System.Drawing.Point(-1, 0);
+            this.WMBackground.Location = new System.Drawing.Point(0, -3);
             this.WMBackground.Name = "WMBackground";
-            this.WMBackground.Size = new System.Drawing.Size(753, 466);
+            this.WMBackground.Size = new System.Drawing.Size(746, 504);
             this.WMBackground.TabIndex = 9;
             this.WMBackground.TabStop = false;
             this.WMBackground.Click += new System.EventHandler(this.WMBackground_Click);
@@ -164,19 +163,6 @@
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Crimson;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(728, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(24, 23);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblCredentials
             // 
@@ -210,16 +196,15 @@
             this.BtnMenu.UseVisualStyleBackColor = true;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
-            // WelcomeMenu
+            // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(752, 466);
+            this.ClientSize = new System.Drawing.Size(746, 498);
             this.Controls.Add(this.BtnMenu);
             this.Controls.Add(this.btnClearInPut);
             this.Controls.Add(this.lblCredentials);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.txtStudentAge);
             this.Controls.Add(this.txtStudentCourse);
@@ -231,8 +216,7 @@
             this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.WMBackground);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "WelcomeMenu";
+            this.Name = "frmAddStudent";
             this.Text = "WelcomeMenu";
             this.Load += new System.EventHandler(this.WelcomeMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WMBackground)).EndInit();
@@ -254,7 +238,6 @@
         private System.Windows.Forms.TextBox txtStudentAge;
         private System.Windows.Forms.PictureBox WMBackground;
         private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCredentials;
         private System.Windows.Forms.Button btnClearInPut;
         private System.Windows.Forms.Button BtnMenu;

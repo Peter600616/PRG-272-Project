@@ -12,13 +12,13 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace PRG_272_Project
 {
-    public partial class WelcomeMenu : Form
+    public partial class frmAddStudent : Form
     {
         static List<string> studentList = new List<string>();
 
         string studentsInfo = "students.txt";
         Student student = new Student();
-        public WelcomeMenu()
+        public frmAddStudent()
         {
             InitializeComponent();
         }
@@ -92,8 +92,9 @@ namespace PRG_272_Project
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            Form1 moreMenu = new Form1();
-            moreMenu.ShowDialog();  
+            /*frmMainMenu moreMenu = new frmMainMenu();
+            moreMenu.ShowDialog();  */
+            this.Close();
         }
     }
 }

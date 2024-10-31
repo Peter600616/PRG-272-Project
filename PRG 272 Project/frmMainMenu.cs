@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRG_272_Project
 {
-    public partial class Form1 : Form
+    public partial class frmMainMenu : Form
     {
-        public Form1()
+        public frmMainMenu()
         {
             InitializeComponent();
         }
@@ -24,6 +24,10 @@ namespace PRG_272_Project
 
         }
 
-        
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            frmAddStudent addStudent = new frmAddStudent();
+            addStudent.ShowDialog();
+        }
     }
 }

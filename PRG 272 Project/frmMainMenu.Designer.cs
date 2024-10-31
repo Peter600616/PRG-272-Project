@@ -1,6 +1,6 @@
 ﻿namespace PRG_272_Project
 {
-    partial class Form1
+    partial class frmMainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.btnUpdateInfo = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnSummary = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnViewStudents
@@ -70,16 +71,27 @@
             this.btnSummary.Text = "Generate Summary Report";
             this.btnSummary.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // btnAddStudent
+            // 
+            this.btnAddStudent.Location = new System.Drawing.Point(303, 170);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(213, 94);
+            this.btnAddStudent.TabIndex = 5;
+            this.btnAddStudent.Text = "Add New Student";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            // 
+            // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 708);
+            this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnSummary);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnUpdateInfo);
             this.Controls.Add(this.btnViewStudents);
-            this.Name = "Form1";
+            this.Name = "frmMainMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.Button btnUpdateInfo;
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Button btnSummary;
+        private System.Windows.Forms.Button btnAddStudent;
     }
 }
 
