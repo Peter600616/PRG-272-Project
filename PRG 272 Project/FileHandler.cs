@@ -15,14 +15,13 @@ namespace PRG_272_Project
         public void write(List<Student> students)
         {
 
-
             FileStream fs = new FileStream(path, FileMode.Create);
             using (StreamWriter sw = new StreamWriter(fs))
             {
                 string text;
                 foreach (Student student in students)
                 {
-                    text = student.StudentID + "," + student.StudentName + "," + student.Age + "," + student.Course;
+                    text = student.StudentID + "," + student.StudentName + "," + student.Age + "," + student.Course;                 
                     sw.WriteLine(text);
                 }
             }

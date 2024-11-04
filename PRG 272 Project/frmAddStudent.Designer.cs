@@ -136,7 +136,7 @@
             this.txtStudentAge.Location = new System.Drawing.Point(290, 255);
             this.txtStudentAge.Name = "txtStudentAge";
             this.txtStudentAge.Size = new System.Drawing.Size(202, 20);
-            this.txtStudentAge.TabIndex = 8;
+            this.txtStudentAge.TabIndex = 5;
             this.txtStudentAge.TextChanged += new System.EventHandler(this.txtStudentAge_TextChanged);
             // 
             // WMBackground

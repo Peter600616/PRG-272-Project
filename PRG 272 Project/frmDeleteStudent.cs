@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,22 @@ namespace PRG_272_Project
             students = fileHandler.read();
 
             dgvDeleteStudent.DataSource = students;
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            var selected = dgvDeleteStudent.SelectedRows[0].DataBoundItem as Student;
+
+            students.Remove(selected);
+            
+
+            FileHandler fileHandler = new FileHandler();
+            fileHandler.write(students);
+
+            dgvDeleteStudent.DataSource = null;
+            dgvDeleteStudent.DataSource = students;
+
+
         }
     }
 }
