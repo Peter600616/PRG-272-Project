@@ -89,6 +89,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PRG_272_Project.Properties.Resources.pngtree_blue_background_and_wallpaper_hd_image_victor_free_vector_image_2422840;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1135, 708);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnSummary);
