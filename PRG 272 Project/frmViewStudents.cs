@@ -23,7 +23,18 @@ namespace PRG_272_Project
             FileHandler fileHandler = new FileHandler();
             students = fileHandler.read();
 
+            //populate datagridview with text file data
             dgvViewStudents.DataSource = students;
+        }
+
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvViewStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

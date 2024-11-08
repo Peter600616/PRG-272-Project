@@ -30,16 +30,18 @@
         {
             this.dgvDeleteStudent = new System.Windows.Forms.DataGridView();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.BtnMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDeleteStudent
             // 
             this.dgvDeleteStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeleteStudent.Location = new System.Drawing.Point(115, 68);
+            this.dgvDeleteStudent.Location = new System.Drawing.Point(199, 60);
             this.dgvDeleteStudent.Name = "dgvDeleteStudent";
+            this.dgvDeleteStudent.RowHeadersWidth = 49;
             this.dgvDeleteStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDeleteStudent.Size = new System.Drawing.Size(605, 281);
+            this.dgvDeleteStudent.Size = new System.Drawing.Size(451, 281);
             this.dgvDeleteStudent.TabIndex = 0;
             // 
             // btnDeleteStudent
@@ -52,14 +54,26 @@
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
+            // BtnMenu
+            // 
+            this.BtnMenu.Location = new System.Drawing.Point(384, 471);
+            this.BtnMenu.Name = "BtnMenu";
+            this.BtnMenu.Size = new System.Drawing.Size(75, 23);
+            this.BtnMenu.TabIndex = 14;
+            this.BtnMenu.Text = "Go To Menu";
+            this.BtnMenu.UseVisualStyleBackColor = true;
+            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
             // frmDeleteStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 468);
+            this.ClientSize = new System.Drawing.Size(841, 539);
+            this.Controls.Add(this.BtnMenu);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.dgvDeleteStudent);
             this.Name = "frmDeleteStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete a Student";
             this.Load += new System.EventHandler(this.frmDeleteStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteStudent)).EndInit();
@@ -71,5 +85,6 @@
 
         private System.Windows.Forms.DataGridView dgvDeleteStudent;
         private System.Windows.Forms.Button btnDeleteStudent;
+        private System.Windows.Forms.Button BtnMenu;
     }
 }

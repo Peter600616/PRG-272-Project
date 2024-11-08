@@ -63,6 +63,16 @@ namespace PRG_272_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pcb_background {
+            get {
+                object obj = ResourceManager.GetObject("pcb-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_blue_background_and_wallpaper_hd_image_victor_free_vector_image_2422840 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-blue-background-and-wallpaper-hd-image-victor-free-vector-image_2422840", resourceCulture);

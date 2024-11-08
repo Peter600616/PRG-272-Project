@@ -17,11 +17,12 @@ namespace PRG_272_Project
         {
             InitializeComponent();
         }
-
+        //creating list and filehandler object
         List<Student> students = new List<Student>();
+        FileHandler fileHandler = new FileHandler();
         private void frmDeleteStudent_Load(object sender, EventArgs e)
         {
-            FileHandler fileHandler = new FileHandler();
+            //populating datagridview with file data
             students = fileHandler.read();
 
             dgvDeleteStudent.DataSource = students;
@@ -29,18 +30,23 @@ namespace PRG_272_Project
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
+            //getting selected row as a student object
             var selected = dgvDeleteStudent.SelectedRows[0].DataBoundItem as Student;
-
-            students.Remove(selected);
             
-
-            FileHandler fileHandler = new FileHandler();
+            //remove from list and overwrite file
+            students.Remove(selected);
+                        
             fileHandler.write(students);
 
+            //reloading datagridview with updated list
             dgvDeleteStudent.DataSource = null;
             dgvDeleteStudent.DataSource = students;
 
+        }
 
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

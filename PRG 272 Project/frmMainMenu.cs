@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace PRG_272_Project
 {
@@ -21,9 +22,10 @@ namespace PRG_272_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        //All buttons open the relevant forms
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
             frmAddStudent addStudent = new frmAddStudent();
@@ -50,8 +52,8 @@ namespace PRG_272_Project
 
         private void btnUpdateInfo_Click(object sender, EventArgs e)
         {
-            frmSummaryReport updateReport = new frmSummaryReport();
-            updateReport.ShowDialog();
+            frmUpdateStudent updateStudent = new frmUpdateStudent();
+            updateStudent.ShowDialog();
         }
     }
 }

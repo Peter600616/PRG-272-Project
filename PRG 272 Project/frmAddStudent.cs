@@ -14,8 +14,8 @@ namespace PRG_272_Project
 {
     public partial class frmAddStudent : Form
     {
+        //list of student objects
         static List<Student> studentList = new List<Student>();
-
         
         public frmAddStudent()
         {
@@ -30,36 +30,55 @@ namespace PRG_272_Project
 
         private void WelcomeMenu_Load(object sender, EventArgs e)
         {
-            lblWelcome.Parent = WMBackground;
-            lblCredentials.Parent = WMBackground;
-            lblWelcome.BackColor = Color.Transparent;
-            lblCredentials.BackColor = Color.Transparent;   
+            
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            int studentID = int.Parse(txtStudentID.Text);
+            //getting information from text boxes
+            int studentID = Convert.ToInt32(nudStudentID.Value);
             string studentName = txtStudentName.Text;
-            int studentAge = int.Parse(txtStudentAge.Text);
+            int studentAge = Convert.ToInt32(nudAge.Value);
             string studentCourse = txtStudentCourse.Text;
 
+            //create a filehandler object and read contents of text file into list
+            FileHandler fh = new FileHandler();
+            studentList = fh.read();
+
+            //validation for inputs
+            foreach(Student st in studentList)
+            {
+                if(st.StudentID == studentID)
+                {
+                    MessageBox.Show("Student with this ID already exists");
+                    return;
+                }
+            }
+
+            if(studentCourse == "BIT" || studentCourse == "BComp" || studentCourse == "DIT")
+            {
+                //continue with valid options
+            }
+            else
+            {
+                MessageBox.Show("Invalid course entered.\nAvailable courses: BIT, BComp, DIT");
+                return;
+            }
+
+            if(studentAge < 16)
+            {
+                MessageBox.Show("Student cannot be younger than 16.");
+                return;
+            }
+
+            //create new student object and add to list
             Student student = new Student(studentID, studentName, studentAge, studentCourse);
             studentList.Add(student);
 
-            FileHandler fh = new FileHandler();
+            //overwrite file
             fh.write(studentList);
 
-            /*
-            using (StreamWriter write = new StreamWriter(studentsInfo,true))
-            {
-                Student student = new Student(studentID, studentName, studentAge, studentCourse);
-
-                write.WriteLine($"StudentID: {studentID} | Name: {studentName} | Age: {studentAge} | Course: {studentCourse} ");
-               
-                studentList.Add(student.ToString());
-
-            }*/
-
+            
             MessageBox.Show("Data has been saved to the text file");
         }
 
@@ -85,9 +104,10 @@ namespace PRG_272_Project
 
         private void btnClearInPut_Click(object sender, EventArgs e)
         {
-            txtStudentAge.Text = string.Empty;
+            //clear values
+            nudStudentID.Value = 0;
             txtStudentCourse.Text = string.Empty;
-            txtStudentID.Text = string.Empty;
+            nudAge.Value = 0;
             txtStudentName.Text = string.Empty;
         }
 
@@ -98,9 +118,17 @@ namespace PRG_272_Project
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            /*frmMainMenu moreMenu = new frmMainMenu();
-            moreMenu.ShowDialog();  */
             this.Close();
+        }
+
+        private void lblStudentID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStudentAge_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
